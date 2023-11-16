@@ -1,0 +1,64 @@
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #FFCDB2; 
+    color: #6D6975;
+    text-align: center;
+}
+
+#timer {
+    font-size: 60pt;
+    margin: 20px;
+}
+
+button{
+    background-color: #6D6875;
+    color:white;
+}
+
+
+.buttons button {
+    font-size: 1em;
+    margin: 5px;
+    padding: 10px;
+}
+
+.todolist {
+    margin-top: 20px;
+}
+
+.todolist h2 {
+    margin-bottom: 10px;
+}
+
+#taskInput {
+    margin-bottom: 10px;
+}
+
+#taskList li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#taskList li button {
+    margin-left: 100px;
+    width: 30px; 
+    height: 30px; 
+    padding: 6px 0px; 
+    border-radius: 15px; 
+    font-size: 8px; 
+    text-align: center; 
+
+}
