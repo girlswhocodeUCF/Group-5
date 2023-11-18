@@ -139,7 +139,7 @@ function loadTasksFromLocalStorage() {
 
         const deleteButton = document.createElement("button");
         deleteButton.innerText = "x";
-        deleteButton.classList.add("btn"); 
+        deleteButton.classList.add("btn taskbutton"); 
         deleteButton.addEventListener("click", deleteTask);
 
         taskItem.appendChild(checkbox);
