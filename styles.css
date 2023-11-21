@@ -1,9 +1,11 @@
 .body{
-    background-color: #F7e7ce;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,31 +15,23 @@ body {
 
 
 .container {
-    color: #6D6975;
+    color: whitesmoke;
     text-align: center;
-    
-
 }
 
 #timer {
-    font-size: 60pt;
+    font-size: 80pt;
     margin: 20px;
 }
 
-button{
-    background-color: #6D6875;
-    color:white;
+.pomodoro button{
+    color:black;
 }
 
-.taskbutton{
-    background-color: red;
+.buttons img {
+    width: 50px;
 }
 
-.buttons button {
-    font-size: 1em;
-    margin: 5px;
-    padding: 10px;
-}
 
 .todolist {
     margin-top: 20px;
@@ -52,6 +46,7 @@ button{
 }
 
 #taskList li {
+    opacity: 0.5;
     list-style-type: none;
     margin-bottom: 10px;
     display: flex;
@@ -69,6 +64,64 @@ button{
 
 }
 
-img{
+.notebook img{
     width:300px;
+}
+
+.completed {
+    text-decoration: line-through;
+  }
+
+.task-image {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+.list-group-item {
+    color:black;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+#draggableImage {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage2 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage3 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage4 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage5 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
 }
