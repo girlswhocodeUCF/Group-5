@@ -1,11 +1,9 @@
 let timer;
 let minutes = 25;
 let seconds = 0;
+let stickers = 0; 
 
 
-/********************************************************/
-/************Image 1 Drag and drop properties************/
-/********************************************************/
 let isDragging = false;
 let offsetX, offsetY;
 
@@ -34,10 +32,6 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-/********************************************************/
-/************Image 2 Drag and drop properties************/
-/********************************************************/
-
 let isDragging2 = false;
 let offsetX2, offsetY2;
 
@@ -65,9 +59,7 @@ document.addEventListener('mousemove', (e) => {
         draggableImage2.style.top = `${y}px`;
     }
 });
-/********************************************************/
-/************Image 3 Drag and drop properties************/
-/********************************************************/
+
 let isDragging3 = false;
 let offsetX3, offsetY3;
 
@@ -95,70 +87,7 @@ document.addEventListener('mousemove', (e) => {
         draggableImage3.style.top = `${y}px`;
     }
 });
-/********************************************************/
-/************Image 4 Drag and drop properties************/
-/********************************************************/
-let isDragging4 = false;
-let offsetX4, offsetY4;
 
-const draggableImage4 = document.getElementById('draggableImage4');
-
-draggableImage4.addEventListener('mousedown', (e) => {
-    e.preventDefault(); // Prevent the default browser drag-and-drop behavior
-    isDragging4= true;
-    offsetX4 = e.clientX - draggableImage4.getBoundingClientRect().left;
-    offsetY4 = e.clientY - draggableImage4.getBoundingClientRect().top;
-    draggableImage4.style.cursor = 'grabbing';
-});
-
-document.addEventListener('mouseup', () => {
-    isDragging4 = false;
-    draggableImage4.style.cursor = 'grab';
-});
-
-document.addEventListener('mousemove', (e) => {
-    if (isDragging4) {
-        const x = e.clientX - offsetX4;
-        const y = e.clientY - offsetY4;
-
-        draggableImage4.style.left = `${x}px`;
-        draggableImage4.style.top = `${y}px`;
-    }
-});
-/********************************************************/
-/************Image 5 Drag and drop properties************/
-/********************************************************/
-let isDragging5 = false;
-let offsetX5, offsetY5;
-
-const draggableImage5 = document.getElementById('draggableImage5');
-
-draggableImage5.addEventListener('mousedown', (e) => {
-    e.preventDefault(); // Prevent the default browser drag-and-drop behavior
-    isDragging5= true;
-    offsetX5 = e.clientX - draggableImage5.getBoundingClientRect().left;
-    offsetY5 = e.clientY - draggableImage5.getBoundingClientRect().top;
-    draggableImage5.style.cursor = 'grabbing';
-});
-
-document.addEventListener('mouseup', () => {
-    isDragging5 = false;
-    draggableImage5.style.cursor = 'grab';
-});
-
-document.addEventListener('mousemove', (e) => {
-    if (isDragging5) {
-        const x = e.clientX - offsetX5;
-        const y = e.clientY - offsetY5;
-
-        draggableImage5.style.left = `${x}px`;
-        draggableImage5.style.top = `${y}px`;
-    }
-});
-
-/********************************************************/
-/************             Timer              ************/
-/********************************************************/
 
 function startPomodoro() {
     resetTimer();
@@ -182,8 +111,8 @@ function pauseTimer() {
 
 function resetTimer() {
     clearInterval(timer);
-    minutes = 25; 
-    seconds = 0;
+    minutes = 0; // Default to Pomodoro time
+    seconds = 3;
     updateDisplay();
 }
 
@@ -191,10 +120,20 @@ function updateTimer() {
     if (minutes === 0 && seconds === 0) {
         clearInterval(timer);
         alert("You earn a new sticker!");
-    /*************************************/
-    /************Sticker Rules************/
-    /*************************************/
-
+        stickers++;
+        
+        if(stickers == 1){
+            document.getElementsByClassName("sun")[0].style.display = "block";
+        }
+        if(stickers == 2){
+            document.getElementsByClassName("moon")[0].style.display = "block";
+        }
+        if(stickers==3){
+            document.getElementsByClassName("mars")[0].style.display = "block";
+        }
+        if(stickers==4){
+            alert("You earned all the stickers!");
+        }
         return;
     }
 
@@ -220,10 +159,7 @@ function padZero(value) {
 // Initial display
 updateDisplay();
 
-/********************************************************/
-/************             To Do              ************/
-/********************************************************/
-
+// ... (previous code)
 function addTask() {
     var taskInput = document.getElementById('newTask');
     var taskText = taskInput.value.trim();
@@ -237,10 +173,7 @@ function addTask() {
       
       // Create an image for unchecked status
       var uncheckedImage = document.createElement('img');
-    /***********************************************************/
-    /************Change file for a different design ************/
-    /***********************************************************/
-      uncheckedImage.src = 'images/unchecked.png';
+      uncheckedImage.src = 'images/unchecked_star.png';
       uncheckedImage.alt = 'Unchecked';
       uncheckedImage.className = 'task-image';
       uncheckedImage.onclick = function() {
@@ -255,10 +188,7 @@ function addTask() {
 
       // Create an image for checked status
       var checkedImage = document.createElement('img');
-    /***********************************************************/
-    /************Change file for a different design ************/
-    /***********************************************************/
-      checkedImage.src = 'images/checked.png';
+      checkedImage.src = 'images/checked_star.png';
       checkedImage.alt = 'Checked';
       checkedImage.className = 'task-image';
       checkedImage.style.display = 'none'; // Initially hidden
@@ -332,7 +262,7 @@ function addTask() {
       var listItem = document.createElement('li');
       listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
       var uncheckedImage = document.createElement('img');
-      uncheckedImage.src = 'unchecked.png';
+      uncheckedImage.src = 'images/unchecked_star.png';
       uncheckedImage.alt = 'Unchecked';
       uncheckedImage.className = 'task-image';
       uncheckedImage.style.display = tasks[i].completed ? 'none' : 'inline';
@@ -344,7 +274,7 @@ function addTask() {
       };
 
       var checkedImage = document.createElement('img');
-      checkedImage.src = 'checked.png';
+      checkedImage.src = 'images/checked_star.png';
       checkedImage.alt = 'Checked';
       checkedImage.className = 'task-image';
       checkedImage.style.display = tasks[i].completed ? 'inline' : 'none';

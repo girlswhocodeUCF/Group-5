@@ -1,11 +1,13 @@
 .body{
-    background-color: black;
+    background-image: url("images/space5.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Kdam Thmor Pro', sans-serif;
 
 }
 
 body {
+    font-family: 'Space Grotesk', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +27,7 @@ body {
 }
 
 .pomodoro button{
-    color:black;
+    color:white;
 }
 
 .buttons img {
@@ -85,6 +87,7 @@ body {
     justify-content: space-between;
   }
 
+
 #draggableImage {
     bottom:50%;
     right:5%;
@@ -109,19 +112,13 @@ body {
     cursor: grab;
     z-index: 1;
 }
-#draggableImage4 {
-    bottom:50%;
-    right:5%;
-    width: 100px;
-    position: absolute;
-    cursor: grab;
-    z-index: 1;
+
+.sun{
+    display: none;
 }
-#draggableImage5 {
-    bottom:50%;
-    right:5%;
-    width: 100px;
-    position: absolute;
-    cursor: grab;
-    z-index: 1;
+.moon{
+    display:none;
+}
+.mars{
+    display:none;
 }
