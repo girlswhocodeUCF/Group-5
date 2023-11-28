@@ -1,0 +1,177 @@
+.body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(79, 90, 214, 0.562);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    color: whitesmoke;
+    text-align: center;
+}
+
+#timer {
+    font-size: 80pt;
+    margin: 20px;
+}
+
+.pomodoro button{
+    color:black;
+}
+
+.buttons img {
+    width: 50px;
+}
+
+
+.todolist {
+    margin-top: 20px;
+}
+
+.todolist h2 {
+    margin-bottom: 10px;
+}
+
+#taskInput {
+    margin-bottom: 10px;
+}
+
+#taskList li {
+    opacity: 0.5;
+    list-style-type: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#taskList li button {
+    margin-left: 100px;
+    width: 30px; 
+    height: 30px; 
+    padding: 6px 0px; 
+    border-radius: 15px; 
+    font-size: 8px; 
+    text-align: center; 
+
+}
+
+.notebook img{
+    width:300px;
+}
+
+.completed {
+    text-decoration: line-through;
+  }
+
+.task-image {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+.list-group-item {
+    color:black;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+#draggableImage {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage2 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage3 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage4 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage5 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+
+.cat{
+    display:none;
+}
+
+.heart{
+    display:none;
+}
+
+.dino{
+    display:none;
+}
+
+
+
+.btn-hello ,
+.btn-bye {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 10px; /* Optional margin between buttons */
+}
+
+.vertical-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-buttons a {
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff; /* Set text color to white */
+    padding: 10px 15px; /* Adjust padding for better appearance */
+}
+
+.vertical-buttons .btn-hello {
+    background-color: #ee7e9f;
+    border: none;
+    border-radius: 10px;
+}
+
+.vertical-buttons .btn-bye {
+    background-color: #153155;
+    border: none;
+    border-radius: 10px;
+}
