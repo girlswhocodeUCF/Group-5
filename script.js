@@ -112,7 +112,7 @@ function pauseTimer() {
 function resetTimer() {
     clearInterval(timer);
     minutes = 0; // Default to Pomodoro time
-    seconds = 3;
+    seconds = 1;
     updateDisplay();
 }
 
@@ -120,15 +120,18 @@ function updateTimer() {
     if (minutes === 0 && seconds === 0) {
         clearInterval(timer);
         alert("You earn a new sticker!");
-        stickers++;
+        stickers++;/* If the timer is over, increase sticker counter */
         
         if(stickers == 1){
+            /* If user finished study timer 1 time, display 1st sticker */
             document.getElementsByClassName("sun")[0].style.display = "block";
         }
         if(stickers == 2){
+            /* If user finished study timer 2 times, display 2nd sticker */
             document.getElementsByClassName("moon")[0].style.display = "block";
         }
         if(stickers==3){
+            /* If user finished study timer 3 times, display 3rd sticker */
             document.getElementsByClassName("mars")[0].style.display = "block";
         }
         if(stickers==4){

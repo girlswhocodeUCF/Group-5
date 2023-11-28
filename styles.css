@@ -113,6 +113,7 @@ body {
     z-index: 1;
 }
 
+/* Hide all images */
 .sun{
     display: none;
 }
@@ -121,4 +122,40 @@ body {
 }
 .mars{
     display:none;
+}
+
+
+.btn-hello ,
+.btn-bye {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 10px; /* Optional margin between buttons */
+}
+
+.vertical-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-buttons a {
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff; /* Set text color to white */
+    padding: 10px 15px; /* Adjust padding for better appearance */
+}
+
+.vertical-buttons .btn-hello {
+    background-color: #9ca2e7;
+    border: none;
+    border-radius: 10px;
+}
+
+.vertical-buttons .btn-bye {
+    background-color: #ee7e9f;
+    border: none;
+    border-radius: 10px;
 }
