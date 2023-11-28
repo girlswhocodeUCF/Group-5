@@ -1,0 +1,163 @@
+.body{
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+body {
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    color:#fcf5f0;
+    /*color:#693841;*/
+    text-align: center;
+}
+
+#timer {
+    font-size: 80pt;
+    margin: 20px;
+}
+
+.pomodoro button{
+    color:#b48484;
+}
+
+.buttons img {
+    width: 50px;
+}
+
+
+.todolist {
+    margin-top: 20px;
+}
+
+.todolist h2 {
+    margin-bottom: 10px;
+}
+
+#taskInput {
+    margin-bottom: 10px;
+}
+
+#taskList li {
+    color: #693841;
+    opacity: 0.5;
+    list-style-type: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#taskList li button {
+    margin-left: 100px;
+    width: 30px; 
+    height: 30px; 
+    padding: 6px 0px; 
+    border-radius: 15px; 
+    font-size: 8px; 
+    text-align: center; 
+
+}
+
+.notebook img{
+    width:300px;
+}
+
+.completed {
+    text-decoration: line-through;
+  }
+
+.task-image {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+.list-group-item {
+    color:black;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+#draggableImage {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage2 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+#draggableImage3 {
+    bottom:50%;
+    right:5%;
+    width: 100px;
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+}
+
+.sun{
+    display: none;
+}
+.moon{
+    display:none;
+}
+.mars{
+    display:none;
+}
+
+
+
+.btn-hello ,
+.btn-bye {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 10px; /* Optional margin between buttons */
+}
+
+.vertical-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-buttons a {
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff; /* Set text color to white */
+    padding: 10px 15px; /* Adjust padding for better appearance */
+}
+
+.vertical-buttons .btn-hello {
+    background-color: #9ca2e7;
+    border: none;
+    border-radius: 10px;
+}
+
+.vertical-buttons .btn-bye {
+    background-color: #153155;
+    border: none;
+    border-radius: 10px;
+}
